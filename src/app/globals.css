@@ -25,3 +25,22 @@ body {
     text-wrap: balance;
   }
 }
+
+.piano {
+  display: flex;
+}
+
+.key {
+  width: 40px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.black {
+  width: 30px;
+  height: 100px;
+  background: black;
+  position: relative;
+  left: -15px;
+  z-index: 1;
+}

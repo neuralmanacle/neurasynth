@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+  padding-left: 170px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c53b3b;
+}
+
+.piano {
+  display: flex;
+  position: relative;
+  width: 1200px; /* Adjusted width for larger piano */
+  height: 400px; /* Adjusted height for larger piano */
+
+}
+
+.key {
+  position: relative;
+  border: 1px solid #000;
+}
+
+.key.white {
+  width: 80px; /* Width of white keys */
+  height: 300px; /* Height of white keys */
+  background-color: white;
+   /* Ensure white keys are on top */
+}
+
+.key.black {
+  width: 50px; /* Width of black keys */
+  height: 200px; /* Height of black keys */
+  background-color: black;
+  position: absolute;
+  z-index: 2; /* Ensure black keys are above white keys */
+  border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+  margin-left: 26px;
+}
+.note-name {
+  color: white; /* Text color for note names */
+  font-size: 14px; /* Adjust font size as needed */
+  position: absolute;
+  top: 10px; /* Adjust top position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center the text */
+}
+
+/* Adjust the left position for each black key */
+.key.black:nth-child(2) { left: 760px; }  /* C#4 */
+.key.black:nth-child(4) { left: 840px; } /* D#4 */
+.key.black:nth-child(6) { left: 920px; } /* F#4 */
+.key.black:nth-child(8) { left: 10px; } /* G#4 */
+.key.black:nth-child(10) { left: 1360px; } /* A#4 */
+.key.black:nth-child(12) { left: 1340px; } /* C#5 */
+.key.black:nth-child(14) { left: 1320px; } /* D#5 */
